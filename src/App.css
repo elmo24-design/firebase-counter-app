@@ -1,38 +1,140 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap');
+
+*{
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #4178E2;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.white-box{
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.dec-btn, .inc-btn{
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.dec-btn{
+  background-color: #FFC700;
+  top: 40%;
+  left: -9%;
+}
+
+.dec-btn:hover{
+  background-color: rgb(255, 176, 28);
+}
+
+.inc-btn{
+  background-color: #00FFE0;
+  top: 40%;
+  right: -9%;
+}
+
+.inc-btn:hover{
+  background-color: #0ffab3;
+}
+
+svg{
+  font-size: 1.5rem;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.number{
+  font-size: 10rem;
+  color: #08A6FF;
+  margin-top: 4.5rem;
+}
+
+.loading{
+  margin-top: 10rem;
+}
+
+.reset-btn{
+  background-color: white;
+  display: flex;
+  align-items: center;
+  color: #08A6FF;
+  padding: 0.2rem 2rem;
+  border-radius: 10px;
+  border: 2px solid #08A6FF;
+  margin-top: -6.5rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+}
+
+.reset-btn:hover{
+  background-color: #08A6FF;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.reset-btn svg{
+  font-size: 2.5rem;
+  margin-right: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.orange-box{
+  background-color: #FB8500;
+  border-radius: 10px;
+  padding: 0.3rem 2rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: -2.2rem;
+  z-index: 1;
+}
+
+.reactLogo, .firebaseLogo{
+  width: 2rem;
+}
+
+.footer{
+  display: flex; 
+  align-items: center;
+  margin-top: 4rem;
+}
+
+small{
+  color: white;
+  margin-right: 15px;
+  font-size: 1rem; 
+}
+
+.firebaseLogo{
+  margin-left: 5px;
 }
